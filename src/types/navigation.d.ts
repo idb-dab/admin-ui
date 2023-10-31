@@ -6,6 +6,7 @@ export interface IRoute {
   icon: JSX.Element | string;
   path: string;
   secondary?: boolean | undefined;
+  subMenu?: any;
 }
 interface RoutesType {
   name: string;
@@ -13,4 +14,5 @@ interface RoutesType {
   icon: JSX.Element | string;
   path: string;
   secondary?: boolean | undefined;
+  subMenu?: any;
 }

@@ -21,7 +21,7 @@ const Dashboard = () => {
       {/* Card widget */}
 
       <div className="mt-3 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-6">
-        <Widget
+        {/* <Widget
           icon={<MdBarChart className="h-7 w-7" />}
           title={'Earnings'}
           subtitle={'$340.5'}
@@ -50,14 +50,14 @@ const Dashboard = () => {
           icon={<IoMdHome className="h-6 w-6" />}
           title={'Total Projects'}
           subtitle={'$2433'}
-        />
+        /> */}
       </div>
 
       {/* Charts */}
 
       <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
-        <TotalSpent />
-        <WeeklyRevenue />
+        {/* <TotalSpent /> */}
+        {/* <WeeklyRevenue /> */}
       </div>
 
       {/* Tables & Charts */}
@@ -65,26 +65,26 @@ const Dashboard = () => {
       <div className="mt-5 grid grid-cols-1 gap-5 xl:grid-cols-2">
         {/* Check Table */}
         <div>
-          <CheckTable tableData={tableDataCheck} />
+          {/* <CheckTable tableData={tableDataCheck} /> */}
         </div>
 
         {/* Traffic chart & Pie Chart */}
 
         <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-2">
-          <DailyTraffic />
-          <PieChartCard />
+          {/* <DailyTraffic /> */}
+          {/* <PieChartCard /> */}
         </div>
 
         {/* Complex Table , Task & Calendar */}
 
-        <ComplexTable tableData={tableDataComplex} />
+        {/* <ComplexTable tableData={tableDataComplex} /> */}
 
         {/* Task chart & Calendar */}
 
         <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-2">
-          <TaskCard />
+          {/* <TaskCard /> */}
           <div className="grid grid-cols-1 rounded-[20px]">
-            <MiniCalendar />
+            {/* <MiniCalendar /> */}
           </div>
         </div>
       </div>

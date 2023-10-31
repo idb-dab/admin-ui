@@ -152,6 +152,31 @@ module.exports = {
       lightPrimary: '#F4F7FE',
       blueSecondary: '#4318FF',
       brandLinear: '#868CFF',
+      bob:{
+        primary:{
+          0:'#ffffff',
+          50: '#fff7ed',
+          100: '#ffedd5',
+          200: '#fed7aa',
+          300: '#fdba74',
+          400: '#fb923c',
+          500: '#f97316',
+          600: '#ea580c',
+          700: '#c2410c',
+          800: '#9a3412',
+          900: '#7c2d12',
+        },
+        secondary:{
+          100: '#1F3C664D',
+          200: '#F3F9FD',
+          300: '#1F3C66',
+          400: '#FFF8F7',
+          500: '#FFF3F1',
+          600: '#FCECE5',
+          700: '#FFEDE6',
+          800: '#FF5C34',
+        }
+      },
       gray: {
         50: '#F5F6FA',
         100: '#EEF0F6',
