@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   html {
-    font-family: 'DM Sans', sans-serif !important;
+    font-family: 'Open Sans','arial' !important;
     font-feature-settings: 'kern' !important;
     -webkit-font-smoothing: antialiased;
     letter-spacing: -0.2px;
@@ -14,6 +15,57 @@
 }
 input.defaultCheckbox {
   color: white;
+}
+
+
+.card::-webkit-scrollbar {
+  width: 4px;
+}
+
+.card::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.card::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.card::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 3px;
+  
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.sidebar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.curve{
+  background-color:black;
+    width:100%;
+    height:50px;
+    border-top-left-radius: 100% 100%;
+    border-bottom-left-radius:100% 90%;
+    border-bottom-right-radius:7% 70%;
+    background: #232323;
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.36);
 }
 
 input.defaultCheckbox::before {

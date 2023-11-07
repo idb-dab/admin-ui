@@ -57,8 +57,8 @@ const routes = [
     icon: <MdMonitor className="h-5 w-5" />,
   },
   {
-    name: 'Channel Adminstration',
-    layout: '/admin/adminstration',
+    name: 'Channel Administration',
+    layout: '/admin/administration',
     path: 'channel',
     icon: <RiWechatChannelsLine className="h-5 w-5" />,
     secondary: true,
@@ -69,8 +69,8 @@ const routes = [
     ]
   },
   {
-    name: 'Transaction Adminstration',
-    layout: '/admin/adminstration',
+    name: 'Transaction Administration',
+    layout: '/admin/administration',
     path: 'transaction',
     icon: <AiOutlineTransaction className="h-5 w-5" />,
     secondary: true,
@@ -81,8 +81,8 @@ const routes = [
     ]
   },
   {
-    name: 'General Adminstration',
-    layout: '/admin/adminstration',
+    name: 'General Administration',
+    layout: '/admin/administration',
     path: 'general',
     icon: <FaRandom className="h-5 w-5" />,
     secondary: true,
@@ -101,7 +101,7 @@ const routes = [
     subMenu: [
       {
         layout: '',
-        name: 'Dash Board',
+        name: 'Dashboard',
         path: 'dashboard'
       },
       {
@@ -140,7 +140,7 @@ const routes = [
     subMenu: [
       {
         layout: '',
-        name: 'Dash Board',
+        name: 'Dashboard',
         path: 'dashboard'
       },
       {
@@ -178,8 +178,55 @@ const routes = [
     secondary: true,
     subMenu: [
       {
-        name: 'sample option'
-      }
+        layout: '',
+        name: 'Dashboard',
+        path: 'dashboard'
+      },
+      {
+        layout: '',
+        name: 'Online Registration Maintenance',
+        path: 'online-registration-maintenance',
+      },
+      {
+        layout: '',
+        name: 'Financial Transaction Queue',
+        path: 'financial-transaction-queue'
+      },
+      {
+        layout: '',
+        name: 'Transaction Support Services Queue',
+        path: 'transaction-support-services-queue'
+      },
+      {
+        layout: '',
+        name: 'Service Request Queue',
+        path: 'service-request-queue'
+      },
+      {
+        layout: '',
+        name: 'Payable Instruments Queue',
+        path: 'payable-instruments-queue'
+      },
+      {
+        layout: '',
+        name: 'Receivable Instruments Queue',
+        path: 'receivable-instrument-queue'
+      },
+      {
+        layout: '',
+        name: 'Confirmation Approval Queue',
+        path: 'confirmation-approval-queue'
+      },
+      {
+        layout: '',
+        name: 'Investment Management Queue',
+        path: 'investment-management-queue'
+      },
+      {
+        layout: '',
+        name: 'Transaction Based Inquiry',
+        path: 'transaction-based-inquiry'
+      },
     ]
   },
   {
@@ -190,13 +237,60 @@ const routes = [
     secondary: true,
     subMenu: [
       {
-        name: 'sample option'
-      }
+        layout: '',
+        name: 'Dashboard',
+        path: 'dashboard'
+      },
+      {
+        layout: '',
+        name: 'Online Registration Maintenance',
+        path: 'online-registration-maintenance',
+      },
+      {
+        layout: '',
+        name: 'Financial Transaction Queue',
+        path: 'financial-transaction-queue'
+      },
+      {
+        layout: '',
+        name: 'Transaction Support Services Queue',
+        path: 'transaction-support-services-queue'
+      },
+      {
+        layout: '',
+        name: 'Service Request Queue',
+        path: 'service-request-queue'
+      },
+      {
+        layout: '',
+        name: 'Payable Instruments Queue',
+        path: 'payable-instruments-queue'
+      },
+      {
+        layout: '',
+        name: 'Receivable Instruments Queue',
+        path: 'receivable-instrument-queue'
+      },
+      {
+        layout: '',
+        name: 'Confirmation Approval Queue',
+        path: 'confirmation-approval-queue'
+      },
+      {
+        layout: '',
+        name: 'Investment Management Queue',
+        path: 'investment-management-queue'
+      },
+      {
+        layout: '',
+        name: 'Transaction Based Inquiry',
+        path: 'transaction-based-inquiry'
+      },
     ]
   },
   {
-    name: 'Reports Adminstration',
-    layout: '/admin/adminstration',
+    name: 'Reports Administration',
+    layout: '/admin/administration',
     path: 'reports',
     icon: <MdReport className="h-5 w-5" />,
     secondary: true,
@@ -231,8 +325,8 @@ const routes = [
     ]
   },
   {
-    name: 'Batch Adminstration',
-    layout: '/admin/adminstration',
+    name: 'Batch Administration',
+    layout: '/admin/administration',
     path: 'reports',
     icon: <MdBatchPrediction className="h-5 w-5" />,
     secondary: true,

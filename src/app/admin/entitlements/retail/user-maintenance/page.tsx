@@ -268,10 +268,10 @@ function UserMaintenanceList(props: { transparent?: boolean; vertical?: boolean 
                         </div>
                     </div>
                 </fieldset>
-                <div className="mb-4">
+                <div className="my-6 mr-4 flex justify-end">
                     <button
                         type="submit"
-                        className="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:ring focus:ring-indigo-200"
+                        className="w-[107px] h-10 px-[26px] py-3.5 bg-bob-secondary-300 rounded-[100px] justify-center items-center inline-flex text-center text-white text-base font-bold font-['Airbnb Cereal App'] "
                     >
                         Submit
                     </button>

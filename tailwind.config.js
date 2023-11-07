@@ -2,6 +2,9 @@
 module.exports = {
   darkMode: 'class',
   mode: 'jit',
+  plugins: [
+    require('tailwind-scrollbar'), 
+  ],
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -114,6 +117,7 @@ module.exports = {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
         dm: ['DM Sans', 'sans-serif'],
+        bobFont:['Inter']
       },
       boxShadow: {
         '3xl': '14px 17px 40px 4px',
@@ -153,12 +157,19 @@ module.exports = {
       blueSecondary: '#4318FF',
       brandLinear: '#868CFF',
       bob:{
-        primary:{
-          0:'#ffffff',
+        primary: {
+          100: '#FFF8F7',
+          200: '#FFF3F1',
+          300: '#FCECE5',
+          400: '#FFEDE6',
+          500: '#FCDCD58F',
+          900: '#FF5C34',
+        },
+        secondary: {
           50: '#fff7ed',
-          100: '#ffedd5',
-          200: '#fed7aa',
-          300: '#fdba74',
+          100: '#090d1e',
+          200: '#F3F9FD',
+          300: '#1F3C66',
           400: '#fb923c',
           500: '#f97316',
           600: '#ea580c',
@@ -166,16 +177,16 @@ module.exports = {
           800: '#9a3412',
           900: '#7c2d12',
         },
-        secondary:{
-          100: '#1F3C664D',
-          200: '#F3F9FD',
-          300: '#1F3C66',
-          400: '#FFF8F7',
-          500: '#FFF3F1',
-          600: '#FCECE5',
-          700: '#FFEDE6',
-          800: '#FF5C34',
-        }
+        neutral: {
+          50: '#FAFAFA',
+          100: '#C9C9C9',
+          200: '#FFFFFF80',
+          300: '#575757',
+          400: '#EEF0F3',
+          500: '#CDD1E8',
+          600: '#777777',
+          700: '#585858',
+        },
       },
       gray: {
         50: '#F5F6FA',
