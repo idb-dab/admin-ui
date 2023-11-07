@@ -28,7 +28,7 @@ const Navbar = (props: {
     document.body.classList.contains('dark'),
   );
   return (
-    <nav className={`sticky top-0 bg-red-100 h-15 z-20 p-[10px] flex flex-row justify-between border-b-[0.5px] border-bob-neutral-100 items-center dark:bg-[#0b14374d]`}>
+    <nav className={`sticky top-0 h-15 z-20 flex flex-row border-b-[0.5px] bg-white border-bob-neutral-100 items-center dark:bg-[#0b14374d]`}>
       <div className=' w-full flex flex-wrap justify-between'>
         <div className="relative ml-[1rem] md:ml-[10px] ">
           <Image
@@ -42,8 +42,8 @@ const Navbar = (props: {
 
         <div className="ml-[6px]">
 
-          <div className="flex h-[70%] my-2 items-center rounded-full bg-lightPrimary text-navy-700 dark:bg-navy-900 dark:text-white xl:w-[225px]">
-            <p className="pl-3 pr-2 text-xl">
+          <div className="flex h-[70%] my-2 rounded-full bg-lightPrimary text-navy-700 dark:bg-navy-900 dark:text-white xl:w-[225px]">
+            <p className="mt-2 pl-3 pr-2 text-xl">
               <FiSearch className="h-6 w-6 text-gray-400 dark:text-white" />
             </p>
             <input
@@ -162,7 +162,7 @@ const Navbar = (props: {
               </a>
             </div>
           </Dropdown>
-          <div
+          {/* <div
             className="cursor-pointer text-gray-600"
             onClick={() => {
               if (darkmode) {
@@ -179,7 +179,7 @@ const Navbar = (props: {
             ) : (
               <RiMoonFill className="h-4 w-4 text-gray-600 dark:text-white" />
             )}
-          </div>
+          </div> */}
           {/* Profile & Dropdown */}
           <div className='bg-white h-10 w-10 rounded-full flex items-center justify-center'>
 

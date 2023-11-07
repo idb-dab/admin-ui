@@ -1,88 +1,60 @@
 type RowObj = {
-  name: [string, boolean];
-  progress: string;
-  quantity: number;
-  date: string;
-  info: boolean;
+  referenceId: string;
+  activityType: string;
+  entity: string
+    operation:string,
+    corporateId:string
+    requestBy: string
 };
 
 const tableDataCheck: RowObj[] = [
   {
-    name: ['Horizon UI PRO', true],
-    quantity: 2458,
-    progress: '17.5%',
-    date: '12 Jan 2021',
-    info: false,
+    referenceId: '1001',
+    activityType: 'User Maintainance',
+    entity:'CUSR',
+    operation:'Created',
+    corporateId:'SICORP',
+    requestBy:'BANKUSER',
   },
   {
-    name: ['Horizon UI Free', true],
-    quantity: 1485,
-    progress: '10.8%',
-    date: '21 Feb 2021',
-    info: true,
+    referenceId: '1002',
+    activityType: 'User Maintainance',
+    entity:'CUSR',
+    operation:'Created',
+    corporateId:'SICORP',
+    requestBy:'SUNNYKH',
   },
   {
-    name: ['Weekly Update', true],
-    quantity: 1024,
-    progress: '21.3%',
-    date: '13 Mar 2021',
-    info: true,
+    referenceId: '1003',
+    activityType: 'User Maintainance',
+    entity:'CUSR',
+    operation:'Modified',
+    corporateId:'SICORP',
+    requestBy:'SUNNYKH',
   },
   {
-    name: ['Venus 3D Asset', true],
-    quantity: 858,
-    progress: '31.5%',
-    date: '24 Jan 2021',
-    info: true,
+    referenceId: '1004',
+    activityType: 'User Maintainance',
+    entity:'CUSR',
+    operation:'Created',
+    corporateId:'',
+    requestBy:'BANKUSER',
   },
   {
-    name: ['Marketplace', true],
-    quantity: 258,
-    progress: '12.2%',
-    date: '24 Oct 2022',
-    info: false,
+    referenceId: '1005',
+    activityType: 'User Maintainance',
+    entity:'CUSR',
+    operation:'Created',
+    corporateId:'',
+    requestBy:'BANKUSER',
   },
   {
-    name: ['Horizon UI Free', true],
-    quantity: 1485,
-    progress: '10.8%',
-    date: '21 Feb 2021',
-    info: true,
-  },
-  {
-    name: ['Weekly Update', true],
-    quantity: 1024,
-    progress: '21.3%',
-    date: '13 Mar 2021',
-    info: true,
-  },
-  {
-    name: ['Venus 3D Asset', true],
-    quantity: 858,
-    progress: '31.5%',
-    date: '24 Jan 2021',
-    info: true,
-  },
-  {
-    name: ['Horizon UI Free', true],
-    quantity: 1485,
-    progress: '10.8%',
-    date: '21 Feb 2021',
-    info: true,
-  },
-  {
-    name: ['Weekly Update', true],
-    quantity: 1024,
-    progress: '21.3%',
-    date: '13 Mar 2021',
-    info: true,
-  },
-  {
-    name: ['Venus 3D Asset', true],
-    quantity: 858,
-    progress: '31.5%',
-    date: '24 Jan 2021',
-    info: true,
+    referenceId: '1006',
+    activityType: 'User Maintainance',
+    entity:'CUSR',
+    operation:'Modified',
+    corporateId:'SICORP',
+    requestBy:'BANKUSER',
   },
 ];
 

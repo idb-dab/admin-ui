@@ -16,80 +16,181 @@ import tableDataCheck from 'variables/data-tables/tableDataCheck';
 import tableDataComplex from 'variables/data-tables/tableDataComplex';
 
 const Dashboard = () => {
+
   return (
-    <div>
-      {/* Card widget */}
+    <div className="p-6">
+      <div className='grid grid-cols-1 mb-4 gap-8 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 3xl:grid-cols-4'>
+        <fieldset className=" bg-bob-primary-0 border-bob-neutral-500 border-2 rounded-t-2xl rounded-b-md">
+          <legend className=" ml-2 text-xl leading-6 font-bold text-bob-secondary-100 mb-4 ">
+            {'Password Alerts'}
+          </legend>
 
-      <div className="mt-3 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-6">
-        {/* <Widget
-          icon={<MdBarChart className="h-7 w-7" />}
-          title={'Earnings'}
-          subtitle={'$340.5'}
-        />
-        <Widget
-          icon={<IoDocuments className="h-6 w-6" />}
-          title={'Spend this month'}
-          subtitle={'$642.39'}
-        />
-        <Widget
-          icon={<MdBarChart className="h-7 w-7" />}
-          title={'Sales'}
-          subtitle={'$574.34'}
-        />
-        <Widget
-          icon={<MdDashboard className="h-6 w-6" />}
-          title={'Your Balance'}
-          subtitle={'$1,000'}
-        />
-        <Widget
-          icon={<MdBarChart className="h-7 w-7" />}
-          title={'New Tasks'}
-          subtitle={'145'}
-        />
-        <Widget
-          icon={<IoMdHome className="h-6 w-6" />}
-          title={'Total Projects'}
-          subtitle={'$2433'}
-        /> */}
-      </div>
 
-      {/* Charts */}
-
-      <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
-        {/* <TotalSpent /> */}
-        {/* <WeeklyRevenue /> */}
-      </div>
-
-      {/* Tables & Charts */}
-
-      <div className="mt-5 grid grid-cols-1 gap-5 xl:grid-cols-2">
-        {/* Check Table */}
-        <div>
-          {/* <CheckTable tableData={tableDataCheck} /> */}
-        </div>
-
-        {/* Traffic chart & Pie Chart */}
-
-        <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-2">
-          {/* <DailyTraffic /> */}
-          {/* <PieChartCard /> */}
-        </div>
-
-        {/* Complex Table , Task & Calendar */}
-
-        {/* <ComplexTable tableData={tableDataComplex} /> */}
-
-        {/* Task chart & Calendar */}
-
-        <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-2">
-          {/* <TaskCard /> */}
-          <div className="grid grid-cols-1 rounded-[20px]">
-            {/* <MiniCalendar /> */}
+          <div className="flex h-60 flex-wrap gap-6 overflow-y-auto hover:will-change-scroll card">
+            <div className='space-y-1'>
+              <Widget
+                icon={<MdBarChart className="h-2 w-2 md:h-5 md:w-5 lg:h-8 lg:w-8" />}
+                title={'Sign On Password Expiry'}
+                subtitle={'365 Days'}
+              />
+              <Widget
+                icon={<MdBarChart className="h-2 w-2 md:h-5 md:w-5 lg:h-8 lg:w-8" />}
+                title={'Transaction Password Expiry'}
+                subtitle={'360 Days'}
+              />
+              <Widget
+                icon={<IoDocuments className="h-2 w-2 md:h-5 md:w-5 lg:h-8 lg:w-8" />}
+                title={'Last Unsuccessful Login Attempt'}
+                subtitle={'10/05/2023 09:53:22 AM IST'}
+              />
+            </div>
           </div>
+        </fieldset>
+
+
+        {/* Card 2: Mail Alert */}
+        <fieldset className=" bg-bob-primary-0 border-bob-neutral-500 border-2 rounded-t-2xl rounded-b-md">
+          <legend className=" ml-2 text-xl leading-6 font-bold text-bob-secondary-100 mb-4 ">
+            {'Mail Alert'}
+          </legend>
+
+
+          <div className="flex h-60 flex-wrap gap-6 overflow-y-auto hover:will-change-scroll card">
+            <div className='space-y-1'>
+              <Widget
+                icon={<MdBarChart className="h-2 w-2 md:h-5 md:w-5 lg:h-8 lg:w-8" />}
+                title={'Broadcast messages'}
+                subtitle={'0'}
+              />
+              <Widget
+                icon={<IoDocuments className="h-2 w-2 md:h-5 md:w-5 lg:h-8 lg:w-8" />}
+                title={'Unread messages'}
+                subtitle={'7'}
+              />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset className=" bg-bob-primary-0 border-bob-neutral-500 border-2 rounded-t-2xl rounded-b-md">
+          <legend className=" ml-2 text-xl leading-6 font-bold text-bob-secondary-100 mb-4 ">
+            {'Administration Alert'}
+          </legend>
+
+
+          <div className="flex h-60 flex-wrap gap-6 overflow-y-auto hover:will-change-scroll card">
+            <div className='space-y-1'>
+              <Widget
+                icon={<IoDocuments className="h-2 w-2 md:h-5 md:w-5 lg:h-8 lg:w-8" />}
+                title={'Reports pending for approval'}
+                subtitle={'18'}
+              />
+              <Widget
+                icon={<IoDocuments className="h-2 w-2 md:h-5 md:w-5 lg:h-8 lg:w-8" />}
+                title={'Records sent for review'}
+                subtitle={'5'}
+              />
+              <Widget
+                icon={<IoDocuments className="h-2 w-2 md:h-5 md:w-5 lg:h-8 lg:w-8" />}
+                title={'Records approved'}
+                subtitle={'7'}
+              />
+            </div>
+          </div>
+        </fieldset>
+
+
+        {/* Card 2: Mail Alert */}
+        <fieldset className=" bg-bob-primary-0 border-bob-neutral-500 border-2 rounded-t-2xl rounded-b-md">
+          <legend className=" ml-2 text-xl leading-6 font-bold text-bob-secondary-100 mb-4 ">
+            {'RM Alert'}
+          </legend>
+
+
+          <div className="flex h-60 flex-wrap gap-6 overflow-y-auto hover:will-change-scroll card">
+            <div className='space-y-1'>
+              <Widget
+                icon={<IoDocuments className="h-2 w-2 md:h-5 md:w-5 lg:h-8 lg:w-8" />}
+                title={'Corporate Service Request(s) Pending Approval'}
+                subtitle={'5'}
+              />
+              <Widget
+                icon={<IoDocuments className="h-2 w-2 md:h-5 md:w-5 lg:h-8 lg:w-8" />}
+                title={'Customer Service Request(s) Pending Approval'}
+                subtitle={'8'}
+              />
+              <Widget
+                icon={<IoDocuments className="h-2 w-2 md:h-5 md:w-5 lg:h-8 lg:w-8" />}
+                title={'Customer Mutual Fund(s) Pending Approval'}
+                subtitle={'6'}
+              />
+            </div>
+          </div>
+        </fieldset>
+        {/* <div className='grid grid-cols-1 gap-6'>
+            
+          </div>
+  
+          <div className='grid grid-cols-1 gap-6'>
+            
+          </div> */}
+
+
+      </div>
+
+      <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-1">
+        <CheckTable
+          tableData={tableDataCheck}
+        />
+      </div>
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5">
+
+      </div>
+
+
+      <div>
+        <div className='grid grid-cols-1'>
+          <fieldset className=" bg-bob-primary-0 border-bob-neutral-500 border-2  border-dashed rounded-t-2xl rounded-b-md">
+            <legend className=" ml-2 text-xl text-center leading-6 font-bold text-bob-secondary-100 mb-4 ">
+              {'Additional Information'}
+            </legend>
+
+
+            <div className="flex h-60 flex-wrap gap-6 overflow-y-auto hover:will-change-scroll card">
+              <p className='mx-3'>
+              </p>
+              <></>
+            </div>
+          </fieldset>
         </div>
+      </div>
+
+      <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2">
+        {/* Charts or Components Can be Added Here */}
+      </div>
+
+      <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-2">
+        {/* Tables & Charts */}
+      </div>
+
+
+    </div>
+  );
+
+};
+
+export default Dashboard;
+
+
+const Card = ({ title, children }) => {
+  return (
+    <div className="bg-red-50 border-2 border-bob-neutral-500 rounded-lg shadow-md card p-2">
+      <div>
+        <h2 className="text-xl font-bold text-bob-secondary-100 mb-0">{title}</h2>
+      </div>
+
+      <div className="flex justify-between h-5/6 overflow-y-auto rounded-md card">
+        {children}
       </div>
     </div>
   );
 };
-
-export default Dashboard;

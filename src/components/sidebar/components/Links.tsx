@@ -64,7 +64,7 @@ export const SidebarLinks = (props: { routes: RoutesType[] }): JSX.Element => {
         };
         return (
           <div key={index}>
-            <div className={`flex text-xs max-h-10 flex-col px-3 items-top hover:bg-white ${isActive ? ' transition-all bg-white max-h-12 ' : ''}`}>
+            <div className={`flex text-sm max-h-10 flex-col items-top hover:bg-gray-100 ${isActive ? ' transition-all bg-white max-h-12 ' : ''}`}>
               {/* Conditionally render NavLink based on route.secondary */}
               {route.secondary ?
                 (
@@ -160,18 +160,18 @@ const SubMenu = ({ route, isSubMenuVisible, activeRoute }) => {
   return (
     <div className={`overflow-hidden  transition-all ease-linear duration-300 ${isSubMenuVisible ? 'opacity-100' : 'opacity-0'}`}>
       {isSubMenuVisible && (
-        <div className='flex flex-col text-xs'>
+        <div className='flex flex-col text-sm'>
           {route.subMenu.map((submenuItem, index) => {
             const actualRoute = `${route.layout}/${route.path}/${submenuItem.path}`;
             const isActive = activeRoute(actualRoute);
 
             return (
-              <NavLink key={index} href={actualRoute} className={` hover:bg-white ${isActive ? 'bg-white' : ''}  `}>
+              <NavLink key={index} href={actualRoute} className={` hover:bg-gray-100 ${isActive ? 'bg-white' : ''}  `}>
                 <div className=''></div>
                 <div className="relative ml-2 mb-3 flex hover:cursor-pointer">
                   <li className="my-[3px] flex flex-auto rounded-md cursor-pointer items-center px-1">
                     <p
-                      className={`leading-1 max-h-4 flex flex-auto text-xs text-left pl-8  ${isActive
+                      className={`leading-1 max-h-4 flex flex-auto text-sm text-left pl-8  ${isActive
                         ? 'font-bold text-bob-primary-900 dark:text-white'
                         : 'font-medium text-bob-secondary-100 dark:text-white'
                         }`}

@@ -6,7 +6,7 @@ import AppWrappers from './AppWrappers';
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body id={'root'} className=" card">
+      <body id={'root'} className="overflow-visible card">
         <AppWrappers>{children}</AppWrappers>
       </body>
     </html>

@@ -43,39 +43,41 @@ export default function Admin({ children }: { children: React.ReactNode }) {
 
   if (isWindowAvailable()) document.documentElement.dir = 'ltr';
 
-  return (<div className='h-screen'>
-    <Navbar
-      brandText={getActiveRoute(routes, pathname)}
-      secondary={getActiveNavbar(routes, pathname)}
-    />
-    <div className=' h-screen'>
-      <div className=" flex flex-col  ">
+  return (<div className=' flex flex-col min-h-full  '>
+
+    {/* <div className=' pb-4 pt-1 px-4'> */}
+    {/* <div className=" flex flex-col  "> */}
 
 
-        <div className="flex flex-grow flex-shrink-0 basis-auto flex-col font-dm bg-bob-primary-0 dark:bg-navy-900">
-          <div className='flex w-full h-screen p-4'>
-            <Sidebar routes={routes} open={true} variant="admin" />
+    <div className="flex flex-grow flex-shrink-0 basis-auto flex-col p-2 font-dm bg-bob-primary-0 dark:bg-navy-900">
+      <Navbar
+        brandText={getActiveRoute(routes, pathname)}
+        secondary={getActiveNavbar(routes, pathname)}
+      />
+      <div className='flex flex-grow flex-shrink-0 p-4 basis-auto w-full h-full'>
+        <Sidebar routes={routes} open={true} variant="admin" />
 
-            <main
-              className={`flex w-[75%] flex-grow  overflow-y-auto card`}
-            >
-              <div className=''>
-                <div className='flex flex-wrap'>
-                  <div className='flex ml-5 my-1 text-md text-bob-secondary-100'>
-                    <Breadcrumb />
-                  </div>
-                  {children}
+        <main
+          className={`flex w-[100%] h-fit flex-grow card`}
+        >
+          {/* <div className='py-8'> */}
+          <div className='flex flex-wrap'>
+            <div className='flex ml-5 text-xl text-bob-secondary-500'>
+              <span>Main Dashboard</span>
+            </div>
+            {children}
 
-                </div>
-              </div>
-            </main>
+            {/* </div> */}
           </div>
-        </div>
-        <Footer />
+        </main>
+      </div>
+      <Footer />
 
-
-      </div >
     </div>
+
+
+    {/* </div > */}
+    {/* </div> */}
   </div>
 
 
