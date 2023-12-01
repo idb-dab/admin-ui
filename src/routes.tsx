@@ -17,19 +17,19 @@ import {
   MdQuestionAnswer,
   MdLogin,
   MdMonitor,
-  MdWifiChannel,
   MdReport,
   MdSearch,
   MdHomeRepairService,
   MdBatchPrediction,
 } from 'react-icons/md';
-import { RiWechatChannelsFill, RiWechatChannelsLine } from 'react-icons/ri';
+import { RiWechatChannelsLine } from 'react-icons/ri';
+import { IRoute } from 'types/navigation';
 
-const routes = [
+const routes: IRoute[] = [
   {
     name: 'Main Dashboard',
     layout: '/admin',
-    path: 'default',
+    path: 'admin',
     icon: <MdHome className="h-5 w-5" />,
   },
   {

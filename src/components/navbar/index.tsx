@@ -15,7 +15,7 @@ import {
 import avatar from '/public/img/avatars/avatar4.png';
 import logo from '/public/svg/bank-of-baroda.svg'
 import Image from 'next/image';
-import BreadcrumbItem from 'components/breadcrumb/breadcrumbItems';
+import BreadcrumbItem from 'components/breadcrumb/breadcrumb';
 
 const Navbar = (props: {
   // onOpenSidenav: () => void;

@@ -4,8 +4,6 @@ import { usePathname } from 'next/navigation';
 import NavLink from 'components/link/NavLink';
 import DashIcon from 'components/icons/DashIcon';
 import { MdArrowDropDown } from 'react-icons/md';
-import { IoContrast } from 'react-icons/io5';
-import { BsDot } from 'react-icons/bs';
 
 export const SidebarLinks = (props: { routes: RoutesType[] }): JSX.Element => {
   const pathname = usePathname();
@@ -14,9 +12,9 @@ export const SidebarLinks = (props: { routes: RoutesType[] }): JSX.Element => {
   const activeRoute = useCallback(
     (actualRoute: string) => {
       const isActive = actualRoute.includes(pathname);
-      console.log('actualRoute:', actualRoute);
-      console.log('pathname:', pathname);
-      console.log('isActive:', isActive);
+      // console.log('actualRoute:', actualRoute);
+      // console.log('pathname:', pathname);
+      // console.log('isActive:', isActive);
       return isActive;
     },
     [pathname]

@@ -8,7 +8,8 @@ export interface IRoute {
   secondary?: boolean | undefined;
   subMenu?: any;
 }
-interface RoutesType {
+
+export interface SubRoute {
   name: string;
   layout: string;
   icon: JSX.Element | string;
