@@ -13,6 +13,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      transitionProperty: {
+        'height': 'height',
+      },
       width: {
         '1p': '1%',
         '2p': '2%',

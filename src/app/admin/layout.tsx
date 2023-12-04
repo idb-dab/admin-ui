@@ -43,14 +43,14 @@ export default function Admin({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex min-h-full flex-col">
-      <div className="bg-bob-primary-0 flex flex-shrink-0 flex-grow basis-auto flex-col p-2 font-dm dark:bg-navy-900">
+      <div className="bg-bob-primary-0 flex flex-shrink-0 flex-grow basis-auto flex-col pt-2 font-dm dark:bg-navy-900">
         <Navbar
           brandText={getActiveRoute(routes, pathname)}
           secondary={getActiveNavbar(routes, pathname)}
         />
-        <div className="flex h-full w-full flex-shrink-0 flex-grow basis-auto p-4">
+        <div className="flex h-full w-full flex-shrink-0 flex-grow basis-auto">
           <Sidebar routes={routes} open={true} variant="admin" />
-          <main className={`card flex h-fit w-[100%] flex-grow flex-col`}>
+          <main className={`card flex h-fit w-[100%] flex-grow p-4 flex-col`}>
             <Breadcrumb />
             <div className="flex flex-wrap flex-col">
               <div className="ml-5 flex text-xl text-bob-secondary-500">

@@ -139,8 +139,7 @@ function ComplexFormPage(props: { transparent?: boolean; vertical?: boolean }) {
               </button>
             }
             animation="origin-top-right transition-all duration-300 ease-in-out"
-            classNames="top-11 left-0 w-max"
-            children={
+            classNames="top-11 left-0 w-max">
               <div className="z-50 left w-max rounded-xl bg-white py-3 px-4 text-sm shadow-xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                 <option value="male" onClick={handleGenderChange} className="hover:text-black flex cursor-pointer items-center gap-2 text-gray-600 hover:font-medium">
                   <span>
@@ -158,8 +157,7 @@ function ComplexFormPage(props: { transparent?: boolean; vertical?: boolean }) {
                   </span>
                 </option>
               </div>
-            }
-          />
+              </Dropdown>
         </div>
         <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-2">
 

@@ -1,0 +1,13 @@
+{
+    "admin": {
+        "name":"awdawd",
+        "pathname": "awdawd",
+        "subroutes": [
+            {
+                "name": "awdawd",
+                "pathname": "awdaw",
+                "subroutes": "wadawda"
+            }
+        ]
+    }
+}

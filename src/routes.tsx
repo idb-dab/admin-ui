@@ -25,369 +25,337 @@ import {
 import { RiWechatChannelsLine } from 'react-icons/ri';
 import { IRoute } from 'types/navigation';
 
+const adminPath = '/admin'
+
+// Entitlement (retail/corporate)
+const entitlementsPath = `${adminPath}/entitlements`
+const retailEntitlementsPath = `${entitlementsPath}/retail`
+const corporateEntitlementsPath = `${entitlementsPath}/corporate`
+
+// Relationship management (retail/corporate)
+const managementPath = `${adminPath}/management`
+const retailManagementPath = `${managementPath}/retail`
+const corporateManagementPath = `${managementPath}/corporate`
+
+const samplePath = `${adminPath}/sample-path` // common route for pages not yet implemented
+
 const routes: IRoute[] = [
   {
     name: 'Main Dashboard',
-    layout: '/admin',
-    path: 'admin',
+    pathname: adminPath,
     icon: <MdHome className="h-5 w-5" />,
   },
   {
     name: 'My Profile',
-    layout: '/profile',
-    path: 'profile',
+    pathname: `${adminPath}/profile`, 
     icon: <MdHome className="h-5 w-5" />,
   },
   {
     name: 'Customer Assist Login',
-    layout: '/admin',
-    path: 'customer-assist-login',
+    pathname: samplePath,
     icon: <MdLogin className="h-5 w-5" />,
     secondary: true,
-    subMenu: [
+    subRoutes: [
       {
-        name: 'sample option'
+        name: 'sample option',
+        pathname: samplePath
       }
     ]
   },
   {
     name: 'Monitoring Tool',
-    layout: '/monitoring-tool',
-    path: 'monitoring-tool',
+    pathname: samplePath,
     icon: <MdMonitor className="h-5 w-5" />,
   },
   {
     name: 'Channel Administration',
-    layout: '/admin/administration',
-    path: 'channel',
+    pathname: samplePath,
     icon: <RiWechatChannelsLine className="h-5 w-5" />,
     secondary: true,
-    subMenu: [
+    subRoutes: [
       {
-        name: 'sample option'
+        name: 'sample option',
+        pathname: samplePath
       }
     ]
   },
   {
     name: 'Transaction Administration',
-    layout: '/admin/administration',
-    path: 'transaction',
+    pathname: samplePath,
     icon: <AiOutlineTransaction className="h-5 w-5" />,
     secondary: true,
-    subMenu: [
+    subRoutes: [
       {
-        name: 'sample option'
+        name: 'sample option',
+        pathname: samplePath
       }
     ]
   },
   {
     name: 'General Administration',
-    layout: '/admin/administration',
-    path: 'general',
+    pathname: samplePath,
     icon: <FaRandom className="h-5 w-5" />,
     secondary: true,
-    subMenu: [
+    subRoutes: [
       {
-        name: 'sample option'
+        name: 'sample option',
+        pathname: samplePath
       }
     ]
   },
   {
     name: 'Retail Customer Entitlements',
-    layout: '/admin/entitlements',
-    path: 'retail',
+    pathname: `${retailEntitlementsPath}`,
     icon: <FaCertificate className="h-5 w-5" />,
     secondary: true,
-    subMenu: [
+    subRoutes: [
       {
-        layout: '',
         name: 'Dashboard',
-        path: 'dashboard'
+        pathname: `${retailEntitlementsPath}/dashboad`
       },
       {
-        layout: '',
         name: 'Approval Policy Setup',
-        path: 'approval-policy-setup'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Float Maintenance',
-        path: 'float-maintenance'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Personal Payee Link',
-        path: 'personal-payee-link'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Self Confirmation Setup',
-        path: 'self-confirmation-setup'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'User Maintenance',
-        path: 'user-maintenance'
+        pathname: `${retailEntitlementsPath}/user-maintenance`
       }
     ]
   },
   {
     name: 'Corporate Customer Entitlements',
-    layout: '/admin/entitlements',
-    path: 'corporate',
+    pathname: corporateEntitlementsPath,
     icon: <AiFillSafetyCertificate className="h-5 w-5" />,
     secondary: true,
-    subMenu: [
+    subRoutes: [
       {
-        layout: '',
         name: 'Dashboard',
-        path: 'dashboard'
+        pathname: `${corporateEntitlementsPath}/dashboard`
       },
       {
-        layout: '',
         name: 'Approval Policy Setup',
-        path: 'approval-policy-setup'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Float Maintenance',
-        path: 'float-maintenance'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Personal Payee Link',
-        path: 'personal-payee-link'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Self Confirmation Setup',
-        path: 'self-confirmation-setup'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'User Maintenance',
-        path: 'user-maintenance'
+        pathname: `${corporateEntitlementsPath}/user-maintenance`
       }
     ]
   },
   {
     name: 'Retail Relationship Management',
-    layout: '/admin/management',
-    path: 'retail',
+    pathname: retailManagementPath,
     icon: <FcManager className="h-5 w-5" />,
     secondary: true,
-    subMenu: [
+    subRoutes: [
       {
-        layout: '',
         name: 'Dashboard',
-        path: 'dashboard'
+        pathname: `${retailManagementPath}/dashboard`
       },
       {
-        layout: '',
         name: 'Online Registration Maintenance',
-        path: 'online-registration-maintenance',
+        pathname: samplePath,
       },
       {
-        layout: '',
         name: 'Financial Transaction Queue',
-        path: 'financial-transaction-queue'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Transaction Support Services Queue',
-        path: 'transaction-support-services-queue'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Service Request Queue',
-        path: 'service-request-queue'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Payable Instruments Queue',
-        path: 'payable-instruments-queue'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Receivable Instruments Queue',
-        path: 'receivable-instrument-queue'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Confirmation Approval Queue',
-        path: 'confirmation-approval-queue'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Investment Management Queue',
-        path: 'investment-management-queue'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Transaction Based Inquiry',
-        path: 'transaction-based-inquiry'
+        pathname: samplePath
       },
     ]
   },
   {
     name: 'Corporate Relationship Management',
-    layout: '/admin/management',
-    path: 'corporate',
+    pathname: corporateManagementPath,
     icon: <FcManager className="h-5 w-5" />,
     secondary: true,
-    subMenu: [
+    subRoutes: [
       {
-        layout: '',
         name: 'Dashboard',
-        path: 'dashboard'
+        pathname: `${corporateManagementPath}/dashboard`
       },
       {
-        layout: '',
         name: 'Online Registration Maintenance',
-        path: 'online-registration-maintenance',
+        pathname: samplePath,
       },
       {
-        layout: '',
         name: 'Financial Transaction Queue',
-        path: 'financial-transaction-queue'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Transaction Support Services Queue',
-        path: 'transaction-support-services-queue'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Service Request Queue',
-        path: 'service-request-queue'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Payable Instruments Queue',
-        path: 'payable-instruments-queue'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Receivable Instruments Queue',
-        path: 'receivable-instrument-queue'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Confirmation Approval Queue',
-        path: 'confirmation-approval-queue'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Investment Management Queue',
-        path: 'investment-management-queue'
+        pathname: samplePath
       },
       {
-        layout: '',
         name: 'Transaction Based Inquiry',
-        path: 'transaction-based-inquiry'
+        pathname: samplePath
       },
     ]
   },
   {
     name: 'Reports Administration',
-    layout: '/admin/administration',
-    path: 'reports',
+    pathname: samplePath,
     icon: <MdReport className="h-5 w-5" />,
     secondary: true,
-    subMenu: [
+    subRoutes: [
       {
-        name: 'sample option'
+        name: 'sample option',
+        pathname: samplePath
       }
     ]
   },
   {
     name: 'Activity Inquiry',
-    layout: '/admin',
-    path: 'inquiry',
+    pathname: samplePath,
     icon: <MdSearch className="h-5 w-5" />,
     secondary: true,
-    subMenu: [
+    subRoutes: [
       {
-        name: 'sample option'
+        name: 'sample option',
+        pathname: samplePath
       }
     ]
   },
   {
     name: 'Request Maintenance',
-    layout: '/admin',
-    path: 'maintenance',
+    pathname: 'maintenance',
     icon: <MdHomeRepairService className="h-5 w-5" />,
     secondary: true,
-    subMenu: [
+    subRoutes: [
       {
-        name: 'sample option'
+        name: 'sample option',
+        pathname: samplePath
       }
     ]
   },
   {
     name: 'Batch Administration',
-    layout: '/admin/administration',
-    path: 'reports',
+    pathname: 'reports',
     icon: <MdBatchPrediction className="h-5 w-5" />,
     secondary: true,
-    subMenu: [
+    subRoutes: [
       {
-        name: 'sample option'
+        name: 'sample option',
+        pathname: samplePath
       }
     ]
   },
   {
     name: 'Prepaid Cards',
-    layout: '/admin',
-    path: 'prepaid-cards',
+    pathname: samplePath,
     icon: <IoCard className="h-5 w-5" />,
     secondary: true,
-    subMenu: [
+    subRoutes: [
       {
-        name: 'sample option'
+        name: 'sample option',
+        pathname: samplePath
       }
     ]
   },
   {
     name: 'NFT Marketplace',
-    layout: '/admin',
-    path: 'nft-marketplace',
+    pathname: samplePath,
     icon: <MdOutlineShoppingCart className="h-5 w-5" />,
   },
   {
     name: 'Data Tables',
-    layout: '/admin',
     icon: <MdBarChart className="h-5 w-5" />,
-    path: 'data-tables',
+    pathname: samplePath,
   },
   {
     name: 'Profile',
-    layout: '/admin',
-    path: 'profile',
+    pathname: samplePath,
     icon: <MdPerson className="h-5 w-5" />,
   },
   {
     name: 'Sign In',
-    layout: '/auth',
-    path: 'sign-in',
+    pathname: samplePath,
     icon: <MdLock className="h-5 w-5" />,
   },
   {
     name: 'RTL Admin',
-    layout: '/rtl',
-    path: 'rtl-default',
+    pathname: samplePath,
     icon: <MdHome className="h-5 w-5" />,
   },
   {
     name: 'FAQs',
-    layout: '/faq',
-    path: 'faq',
+    pathname: samplePath,
     icon: <MdQuestionAnswer className="h-5 w-5" />
   },
   {
     name: 'Contact Us',
-    layout: '/contact',
-    path: 'contact-us',
+    pathname: samplePath,
     icon: <MdContactPage className="h-5 w-5" />
   }
 ];
