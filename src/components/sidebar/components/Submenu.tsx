@@ -1,14 +1,16 @@
-import { IRoute } from "types/navigation"
-import NavItem from "./NavItem";
+import { IRoute } from 'types/navigation';
+import NavItem from './NavItem';
 
 type SubmenuProps = {
-    linkDetails: IRoute;
-}
+  subRoutes: IRoute[];
+};
 
-export default function Submenu({ linkDetails }: SubmenuProps){
-    return(
-        <div className="flex w-full">
-            <NavItem linkDetails={linkDetails} />
-        </div>
-    )
+export default function Submenu({ subRoutes }: SubmenuProps) {
+  return (
+    <div className="flex w-full flex-col">
+      {subRoutes.map((each, key) => (
+        <NavItem key={key} linkDetails={each} />
+      ))}
+    </div>
+  );
 }

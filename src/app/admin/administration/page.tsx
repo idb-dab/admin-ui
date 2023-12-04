@@ -55,7 +55,7 @@ function ComplexFormPage(props: { transparent?: boolean; vertical?: boolean }) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const formDataJson = JSON.stringify(formData);
-    console.log(formDataJson); // You can send it to a server or use it as needed
+    // console.log(formDataJson); // You can send it to a server or use it as needed
   };
 
   const { transparent, vertical } = props;

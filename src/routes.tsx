@@ -37,7 +37,7 @@ const managementPath = `${adminPath}/management`
 const retailManagementPath = `${managementPath}/retail`
 const corporateManagementPath = `${managementPath}/corporate`
 
-const samplePath = `${adminPath}/sample-path` // common route for pages not yet implemented
+export const samplePath = `${adminPath}/sample-path` // common route for pages not yet implemented
 
 const routes: IRoute[] = [
   {
@@ -111,7 +111,7 @@ const routes: IRoute[] = [
     subRoutes: [
       {
         name: 'Dashboard',
-        pathname: `${retailEntitlementsPath}/dashboad`
+        pathname: `${retailEntitlementsPath}/dashboard`
       },
       {
         name: 'Approval Policy Setup',

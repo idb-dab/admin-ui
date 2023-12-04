@@ -66,7 +66,7 @@ function UserMaintenanceList(props: { transparent?: boolean; vertical?: boolean 
         }
 
         const userListJson = JSON.stringify(selectedData);
-        console.log(userListJson); // You can send it to a server or use it as needed
+        // console.log(userListJson); // You can send it to a server or use it as needed
     };
 
     return (
