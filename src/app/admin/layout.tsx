@@ -15,6 +15,7 @@ export default function Admin({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   const [currentRoute, setCurrentRoute] = useState<IRoute>(routes[0]);
+  const [ sidebarOpen, setSidebarOpen ] = useState<boolean>(true)
 
   useEffect(() => {
     const pathWithoutQuery = pathname.split('?')[0];
@@ -30,9 +31,9 @@ export default function Admin({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-full flex-col">
       <div className="bg-bob-primary-0 flex flex-shrink-0 flex-grow basis-auto flex-col pt-2 font-dm dark:bg-navy-900">
-        <Navbar brandText={'Temp'} secondary={false} />
+        <Navbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} currentRoute={currentRoute} />
         <div className="flex h-full w-full flex-shrink-0 flex-grow basis-auto">
-          <Sidebar routes={routes} open={true} variant="admin" />
+          <Sidebar routes={routes} open={sidebarOpen} variant="admin" />
           <main className={`card flex h-fit w-[100%] flex-grow flex-col p-4`}>
             <Breadcrumb route={currentRoute} />
             <div className="flex flex-col flex-wrap">

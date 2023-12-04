@@ -1,11 +1,11 @@
 import { IRoute } from 'types/navigation';
 import NavItem from './NavItem';
 
-type SubmenuProps = {
+type NavListProps = {
   subRoutes: IRoute[];
 };
 
-export default function Submenu({ subRoutes }: SubmenuProps) {
+export default function NavList({ subRoutes }: NavListProps) {
   return (
     <div className="flex w-full flex-col">
       {subRoutes.map((each, key) => (

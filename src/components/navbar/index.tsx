@@ -1,77 +1,48 @@
 import React from 'react';
 import Dropdown from 'components/dropdown';
-import { FiAlignJustify } from 'react-icons/fi';
-import NavLink from 'components/link/NavLink';
-import navbarimage from '/public/img/layout/Navbar.png';
+import { AiOutlineMenu } from 'react-icons/ai';
 import { BsArrowBarUp } from 'react-icons/bs';
-import { FiSearch } from 'react-icons/fi';
-import { RiMoonFill, RiSunFill } from 'react-icons/ri';
-// import { RiMoonFill, RiSunFill } from 'react-icons/ri';
-// import Configurator from './Configurator';
+
 import {
   IoMdNotificationsOutline,
   IoMdInformationCircleOutline,
 } from 'react-icons/io';
 import avatar from '/public/img/avatars/avatar4.png';
-import logo from '/public/svg/bank-of-baroda.svg'
+import logo from '/public/svg/bank-of-baroda.svg';
 import Image from 'next/image';
-import BreadcrumbItem from 'components/breadcrumb/breadcrumb';
+import { IRoute } from 'types/navigation';
+import SearchBox from 'components/search-box/SearchBox';
 
 const Navbar = (props: {
-  // onOpenSidenav: () => void;
-  brandText: string;
-  secondary?: boolean | string;
+  sidebarOpen: boolean;
+  setSidebarOpen: (e: boolean) => void;
+  currentRoute: IRoute;
   [x: string]: any;
 }) => {
-  const { onOpenSidenav, brandText, mini, hovered } = props;
-  const [darkmode, setDarkmode] = React.useState(
-    document.body.classList.contains('dark'),
-  );
   return (
-    <nav className={`sticky top-0 h-15 z-20 flex flex-row border-b-[0.5px] bg-white border-bob-neutral-100 items-center dark:bg-[#0b14374d]`}>
-      <div className=' w-full flex flex-wrap justify-between'>
-        <div className="relative ml-[1rem] md:ml-[10px] ">
+    <nav
+      className={`h-15 sticky top-0 z-20 flex items-center border-b-[0.5px] border-bob-neutral-100 bg-white px-4`}
+    >
+      <div className="flex h-full w-full flex-wrap items-center justify-between">
+        {/* Sidebar collapse button and BOB Logo */}
+        <div className="flex h-full items-center">
+          <AiOutlineMenu
+            onClick={() => props.setSidebarOpen(!props.sidebarOpen)}
+            className="h-full w-10 rounded-md p-2 hover:bg-gray-100"
+          />
           <Image
-            width="40"
-            height="80"
-            className="my-2 h-8 md:h-10 w-40 md:w-30 rounded-xl md:rounded-full"
+            className="md:w-30 my-2 h-8 w-40 rounded-xl md:h-10 md:rounded-full"
             src={logo}
             alt="BOB"
           />
         </div>
 
-        <div className="ml-[6px]">
-
-          <div className="flex h-[70%] my-2 rounded-full bg-lightPrimary text-navy-700 dark:bg-navy-900 dark:text-white xl:w-[225px]">
-            <p className="mt-2 pl-3 pr-2 text-xl">
-              <FiSearch className="h-6 w-6 text-gray-400 dark:text-white" />
-            </p>
-            <input
-              type="text"
-              placeholder="Search..."
-              className="block h-full w-full rounded-full bg-lightPrimary text-sm font-medium text-navy-700 outline-none placeholder:!text-gray-400 dark:bg-navy-900 dark:text-white dark:placeholder:!text-white sm:w-fit"
-            />
-          </div>
-
-          {/* <p className="shrink text-[33px] capitalize text-navy-700 dark:text-white">
-          <NavLink
-            href="#"
-            className="font-bold capitalize hover:text-navy-700 dark:hover:text-white"
-          >
-            {brandText}
-          </NavLink>
-        </p> */}
+        {/* Search Box */}
+        <div className="flex h-full items-center">
+          <SearchBox />
         </div>
-        {/* <div>
-        <Breadcrumb>
-          <BreadcrumbItem href="/">Home</BreadcrumbItem>
-          <BreadcrumbItem href="/">Home</BreadcrumbItem>
-        </Breadcrumb>
 
-      </div> */}
-
-        <div className="relative right-0 flex h-[30px] my-2 w-[100px] flex-grow items-center justify-around gap-2 rounded-full bg-white px-2 py-2 shadow-xl shadow-shadow-500 dark:!bg-navy-800 dark:shadow-none md:w-[150px] md:flex-grow-0 md:gap-1 xl:w-[150px] xl:gap-2">
-
+        <div className="relative right-0 my-2 flex h-[30px] w-[100px] flex-grow items-center justify-around gap-2 rounded-full bg-white px-2 py-2 shadow-xl shadow-shadow-500 dark:!bg-navy-800 dark:shadow-none md:w-[150px] md:flex-grow-0 md:gap-1 xl:w-[150px] xl:gap-2">
           <Dropdown
             button={
               <p className="cursor-pointer">
@@ -153,9 +124,7 @@ const Navbar = (props: {
             )}
           </div> */}
           {/* Profile & Dropdown */}
-          <div className='bg-white h-10 w-10 rounded-full flex items-center justify-center'>
-
-
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white">
             <Dropdown
               button={
                 <Image
@@ -203,7 +172,6 @@ const Navbar = (props: {
           </div>
         </div>
       </div>
-
     </nav>
   );
 };
