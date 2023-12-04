@@ -344,11 +344,6 @@ const routes: IRoute[] = [
     icon: <MdLock className="h-5 w-5" />,
   },
   {
-    name: 'RTL Admin',
-    pathname: samplePath,
-    icon: <MdHome className="h-5 w-5" />,
-  },
-  {
     name: 'FAQs',
     pathname: samplePath,
     icon: <MdQuestionAnswer className="h-5 w-5" />
@@ -357,6 +352,10 @@ const routes: IRoute[] = [
     name: 'Contact Us',
     pathname: samplePath,
     icon: <MdContactPage className="h-5 w-5" />
+  },
+  {
+    name: 'Dynamic form',
+    pathname: '/admin/form'
   }
 ];
 export default routes;
