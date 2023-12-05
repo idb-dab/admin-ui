@@ -352,10 +352,6 @@ const routes: IRoute[] = [
     name: 'Contact Us',
     pathname: samplePath,
     icon: <MdContactPage className="h-5 w-5" />
-  },
-  {
-    name: 'Dynamic form',
-    pathname: '/admin/form'
   }
 ];
 export default routes;
