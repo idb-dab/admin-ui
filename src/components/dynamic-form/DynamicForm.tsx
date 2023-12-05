@@ -27,10 +27,6 @@ export default function DynamicForm({ formData, primaryAction, secondaryAction, 
     }, {})
   );
 
-  useEffect(() => {
-    console.log(inputValidation);
-  });
-
   return (
     <div className="flex w-full flex-col space-y-4">
       {formData.map((each, key) => (
@@ -41,9 +37,11 @@ export default function DynamicForm({ formData, primaryAction, secondaryAction, 
               extra="flex w-1/2 flex-col"
               id={each.id}
               onBlur={() => {
-                let temp = { ...inputValidation };
-                temp[each.id] = each.validator(inputData[each.id]);
-                setInputValidation(temp);
+                if (each.validator) {
+                  let temp = { ...inputValidation };
+                  temp[each.id] = each.validator(inputData[each.id]);
+                  setInputValidation(temp);
+                }
               }}
               onChange={(e: ChangeEvent<HTMLInputElement>) => {
                 let temp = { ...inputData };

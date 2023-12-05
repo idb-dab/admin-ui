@@ -74,8 +74,8 @@ const routes: IRoute[] = [
     secondary: true,
     subRoutes: [
       {
-        name: 'sample option',
-        pathname: samplePath
+        name: 'Administration',
+        pathname: `${adminPath}/administration`
       }
     ]
   },
