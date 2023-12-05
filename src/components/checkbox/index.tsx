@@ -1,6 +1,9 @@
+import { ChangeEvent } from "react";
+
 const Checkbox = (props: {
   id?: string;
   extra?: string;
+  onChange?: (e:ChangeEvent<HTMLInputElement>)=>void;
   color?:
     | "red"
     | "blue"
@@ -18,10 +21,11 @@ const Checkbox = (props: {
     | "gray";
   [x: string]: any;
 }) => {
-  const { extra, color, id, ...rest } = props;
+  const { extra, onChange, color, id, ...rest } = props;
   return (
     <input
       id={id}
+      onChange={onChange}
       type="checkbox"
       className={`defaultCheckbox relative flex h-[20px] min-h-[20px] w-[20px] min-w-[20px] appearance-none items-center 
       justify-center rounded-md border border-gray-300 text-white/0 outline-none transition duration-[0.2s]
