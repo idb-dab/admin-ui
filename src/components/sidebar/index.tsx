@@ -1,35 +1,21 @@
 /* eslint-disable */
-
-import { HiX } from 'react-icons/hi';
-import Links from './components/Links';
-
-import SidebarCard from 'components/sidebar/components/SidebarCard';
 import { IRoute } from 'types/navigation';
+import NavList from './components/NavList';
 
-function SidebarHorizon(props: { routes: IRoute[];[x: string]: any }) {
-  const { routes, open, setOpen } = props;
+type SidebarProps = {
+  routes: IRoute[];
+  [x: string]: any;
+};
+
+export default function Sidebar({ routes, open }: SidebarProps) {
   return (
-
-    <aside className='flex flex-col w-[25%] min-h-full'>
-      {/* <div className={`block  top-5 z-40   pb-10 shadow-2xl shadow-white/5 transition duration-200 rounded-lg dark:!bg-navy-800 dark:text-white md:!z-50 lg:!z-50 xl:!z-0 `}> */}
-      {/* <div className="sticky top-3 z-40 flex flex-row items-center justify-between p-1 backdrop-blur-sm"> */}
-      {/* <div className='h-[100%] top-0'> */}
-      <div className='sticky overflow-y-auto top-6 h-screen card '>
-        <div className='flex flex-col -mb-10 h-full'>
-
-          <ul className="mb-auto pt-1 ">
-            <Links routes={routes} />
-          </ul>
+    <aside className={`flex min-h-full flex-col bg-bob-primary-100 pt-5 shadow-md ${open? 'w-1/4': 'w-0'} transition-all duration-300 ease-in-out`}>
+      <div className={`sticky top-14 h-screen overflow-y-auto custom-scrollbar ${!open && 'opacity-0'} transition-all duration-800 ease-in-out`}>
+        <div className="-mb-10 flex h-full flex-col">
+          <NavList subRoutes={routes} />
         </div>
-
       </div>
-      {/* </div> */}
-      <div className='sticky'></div>
-      {/* </div> */}
-
+      <div className="sticky"></div>
     </aside>
-
   );
 }
-
-export default SidebarHorizon;

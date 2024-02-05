@@ -13,6 +13,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      borderWidth: {
+        '1': '1px'
+      },
+      transitionProperty: {
+        'height': 'height',
+      },
       width: {
         '1p': '1%',
         '2p': '2%',
